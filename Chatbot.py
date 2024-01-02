@@ -1,6 +1,6 @@
 from llama_index import VectorStoreIndex, SimpleDirectoryReader
 import openai
-openai.api_key = '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'
+openai.api_key = ''
 
 class Chatbot():
     def __init__ (self):
