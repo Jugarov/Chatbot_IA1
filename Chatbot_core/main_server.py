@@ -3,7 +3,7 @@ from Server import Server
 
 if __name__ == "__main__":
     GustaVOT = Chatbot()
-    server = Server("localhost", 8554, GustaVOT)
+    server = Server("25.69.81.47", 2620, GustaVOT)
 
     try:
         while True:

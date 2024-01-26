@@ -8,7 +8,7 @@ class Chatbot():
         self.readDataBase()
 
     def readDataBase(self):
-        self.documents = SimpleDirectoryReader('data/IA_CURSO').load_data()
+        self.documents = SimpleDirectoryReader('../data/IA_CURSO').load_data()
         self.index = VectorStoreIndex.from_documents(self.documents)
         self.query_engine = self.index.as_query_engine()
 

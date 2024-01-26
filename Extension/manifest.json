@@ -1,0 +1,9 @@
+{
+    "manifest_version": 3,
+    "name": "Chatbot IA1",
+    "version": "1.0",
+    "description": "Chatbot desarrollado para contestar preguntas del espacio de clases de la cátedra de Inteligencia Artificial I de la Facultad de Ingeniería de la Universidad Nacional de Cuyo",
+    "action": {
+        "default_popup": "index.html"
+    }
+  }
