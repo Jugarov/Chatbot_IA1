@@ -9,12 +9,35 @@
 
 <div class="chat-popup" id="myForm">
     <form action="/action_page.php" class="form-container">
-      <h1>Chat</h1>
-  
-      <label for="msg"><b>Message</b></label>
-      <textarea placeholder="Type message.." name="msg" required></textarea>
-  
-      <button type="submit" class="btn">Send</button>
-      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        <div class="chat-box">
+            <div class="chat-box-header">
+              <h3><center>Chatbot IA1</center></h3>
+            </div>
+
+            <div id="chat_box_body" class="chat-box-body">
+              <div id="chat_messages">
+                <div class="message other-message">
+                  Hello!
+                </div>
+                <div class="message my-message">
+                  Hi!
+                </div>
+                <div class="message my-message">
+                  How are you!
+                </div>
+              </div>
+            </div>
+            <div id="typing">
+              <div><span></span> <span></span> <span></span> <span class="n">Someone</span> is typing...</div>
+            </div>
+            <div class="chat-box-footer">
+              <textarea id="chat_input" placeholder="Enter your message here..."></textarea>
+              <button id="send">
+                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                  <path fill="#006ae3" d="M2,21L23,12L2,3V10L17,12L2,14V21Z" />
+                </svg>
+              </button>
+            </div>
+          </div>
     </form>
 </div>
