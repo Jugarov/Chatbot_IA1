@@ -41,6 +41,9 @@
 }
 
 .ext-prompt {
+    background-color: white;
+    border-radius: 20px;
+    border: 1px solid #0000;
     width: 100%;
     display: flex;
     align-items: center;
@@ -53,9 +56,16 @@
 #chat_input {
     width: 70%;
     height: 40px;
-    border-radius: 20px;
     border: 1px solid #0000;
     padding: 10px;
     font-size: 16px;
+    outline: none;
+}
+
+#send {
+    border: 1px solid #0000;
+    background-color: white;
+    font-size: 16px;
+    cursor: pointer;
 }
 
