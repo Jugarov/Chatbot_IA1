@@ -26,7 +26,7 @@
         <section class="ext-prompt">
             <input type="text" id="chat_input" placeholder="Enter your message here...">
             <div id="send-button">
-                <button type="button" id="send" onclick="sendMessage()">
+                <button type="button" id="send" onclick="sendMessage();createMessage('self')">
                     <svg style="width:24px;height:24px" viewBox="0 0 24 24">
                         <path fill="#006ae3" d="M2,21L23,12L2,3V10L17,12L2,14V21Z" />
                     </svg>
@@ -36,6 +36,7 @@
     </div>
 
     <script src="client.js"></script>
+    <script src="message.js"></script>
 </body>
 
 
