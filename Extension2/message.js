@@ -9,12 +9,14 @@ function createMessage(messageType,message=null) {
         message.innerHTML = document.getElementById("chat_input").value;
         document.querySelector(".ext-message").appendChild(messageBox)
 
-    }else if (messageType=="other"){
+    }
+
+   /* }else if (messageType=="other"){
         messageBox.className = "ext-other-message";
         message.innerHTML =message;
         document.querySelector(".ext-message").appendChild(messageBox)
-    }
+    }*/
+  
+    
 
-    
-    
 }

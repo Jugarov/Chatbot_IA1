@@ -1,4 +1,3 @@
-
 class Client {
     constructor(address, port) {
         this.address = address;
@@ -11,7 +10,12 @@ class Client {
 
         this.socket.addEventListener('message', (event) => {
             console.log(`Response received from server: ${event.data}`);
-            createMessage('other',event.data)
+            let messageBox = document.createElement('div');
+            let message= document.createElement('p');
+            messageBox.appendChild(message);
+            messageBox.className = "ext-other-message";
+            message.innerHTML =event.data;
+            document.querySelector(".ext-message").appendChild(messageBox)
         });
 
         this.socket.addEventListener('close', () => {
@@ -44,7 +48,7 @@ class Client {
 let client;
 
 function startApp() {
-    client = new Client("localhost", 5500);
+    client = new Client("25.72.36.120", 2620);
 }
 
 function sendMessage() {

@@ -24,7 +24,7 @@ from Server import Server
 
 if __name__ == "__main__":
     GustaVOT = Chatbot()
-    server = Server("25.69.81.47", 2620, GustaVOT)
+    server = Server("25.72.36.120", 2620, GustaVOT)
 
     try:
         server.listen()
