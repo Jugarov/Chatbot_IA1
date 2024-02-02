@@ -1,43 +1,81 @@
-<html !doctype html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title> Chatbot IA1</title>
-        <link rel="stylesheet" href="./style.css">
-    </head> 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Estilo del contenedor padre con altura fija de 600px y display flex */
+    #contenedor-padre {
+      height: 600px;
+      display: flex;
+      flex-direction: column; /* Apila los elementos verticalmente */
+      border: 1px solid #ccc; /* Bordes opcionales para visualización */
+    }
 
-<div class="chat-popup" id="myForm">
-    <form action="/action_page.php" class="form-container">
-        <div class="chat-box">
-            <div class="chat-box-header">
-              <h3><center>Chatbot IA1</center></h3>
-            </div>
+    /* Estilo del contenedor externo con altura máxima del 50% de su contenedor padre y overflow-y scroll */
+    #contenedor-externo {
+      flex: 1; /* Toma el espacio restante */
+      max-height: 50%;
+      overflow-y: scroll;
+      border: 1px solid #ccc; /* Bordes opcionales para visualización */
+      box-sizing: border-box; /* Incluye el borde en el cálculo del tamaño total */
+    }
 
-            <div id="chat_box_body" class="chat-box-body">
-              <div id="chat_messages">
-                <div class="message other-message">
-                  Hello!
-                </div>
-                <div class="message my-message">
-                  Hi!
-                </div>
-                <div class="message my-message">
-                  How are you!
-                </div>
-              </div>
-            </div>
-            <div id="typing">
-              <div><span></span> <span></span> <span></span> <span class="n">Someone</span> is typing...</div>
-            </div>
-            <div class="chat-box-footer">
-              <textarea id="chat_input" placeholder="Enter your message here..."></textarea>
-              <button id="send">
-                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
-                  <path fill="#006ae3" d="M2,21L23,12L2,3V10L17,12L2,14V21Z" />
-                </svg>
-              </button>
-            </div>
-          </div>
-    </form>
-</div>
+    /* Estilo de los contenedores internos con altura fija y flex: 0 para evitar que crezcan */
+    .contenedor-interno {
+      height: 100px;
+      border-bottom: 1px solid #eee; /* Bordes opcionales para visualización */
+      flex: 0; /* Evita que los contenedores internos crezcan */
+    }
+  </style>
+</head>
+<body>
+  <!-- Contenedor padre con altura fija de 600px y display flex -->
+  <div id="contenedor-padre">
+
+    <!-- Contenedor externo con altura máxima del 50% de su contenedor padre y scroll -->
+    <div id="contenedor-externo">
+
+      <!-- Contenedor interno 1 -->
+      <div class="contenedor-interno">
+        <!-- Contenido del contenedor interno 1 -->
+        Contenedor Interno 1
+      </div>
+
+      <!-- Contenedor interno 2 -->
+      <div class="contenedor-interno">
+        <!-- Contenido del contenedor interno 2 -->
+        Contenedor Interno 2
+      </div>
+
+      <!-- Contenedor interno 3 -->
+      <div class="contenedor-interno">
+        <!-- Contenido del contenedor interno 3 -->
+        Contenedor Interno 3
+      </div>
+
+      <!-- Contenedor interno 1 -->
+      <div class="contenedor-interno">
+        <!-- Contenido del contenedor interno 1 -->
+        Contenedor Interno 1
+      </div>
+
+      <!-- Contenedor interno 2 -->
+      <div class="contenedor-interno">
+        <!-- Contenido del contenedor interno 2 -->
+        Contenedor Interno 2
+      </div>
+
+      <!-- Contenedor interno 3 -->
+      <div class="contenedor-interno">
+        <!-- Contenido del contenedor interno 3 -->
+        Contenedor Interno 3
+      </div>
+
+      <!-- Puedes agregar más contenedores internos según sea necesario -->
+
+    </div>
+
+  </div>
+</body>
+</html>

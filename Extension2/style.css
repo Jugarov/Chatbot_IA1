@@ -4,7 +4,7 @@
     align-items: center;
     width: 300px;
     height: 600px;
-    background-color: #f69c64;
+    background-color: #A1A1E4;
     padding: 10px;
     margin: 10px;
     border: 10px solid #0000 ;
@@ -29,21 +29,18 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-.ext-message{
+.ext-message {
     width: 90%;
     height: 70%;
-    display: flex;
     flex-direction: column;
-    align-items: flex-end;
     justify-content: flex-end;
     background-color: #ffff;
     padding: 10px;
     margin: 10px;
-    border: 10px solid #0000 ;
+    border: 10px solid #0000;
     border-radius: 20px;
-    box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
-    overflow: hidden;
-    overflow-y: scroll;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
 }
 
 
@@ -54,10 +51,11 @@
 }
 
 .ext-self-message{
-    background-color: #63bef6;
-    width: auto;
+    background-color: #E4E4A1;
+    width: fit-content;
     max-width: 75%;
     height: auto;
+    align-self: flex-end;
     display: flex;
     flex-direction: column;
     text-align: end;
@@ -65,13 +63,13 @@
     border-radius: 20px;
     box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
     margin-bottom: 10px;
+    word-wrap: break-word;
+    margin-left: auto;
 }
 
-
-
 .ext-other-message{
-    background-color: #f69c64;
-    width: auto;
+    background-color: #A1A1E4;
+    width: fit-content;
     max-width: 75%;
     height: auto;
     display: flex;
@@ -82,6 +80,7 @@
     border-radius: 20px;
     box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
     margin-bottom: 10px;
+    word-wrap: break-word;
 }
 
 .ext-prompt {
@@ -94,7 +93,6 @@
     flex-direction: row;
     justify-content: space-evenly;
     margin-top: 10px;
-    
 }
 
 #chat_input {
@@ -113,3 +111,20 @@
     cursor: pointer;
 }
 
+.ext-message-scrollable::-webkit-scrollbar {
+    width: 20px; /* ancho de la barra de desplazamiento */
+}
+
+.ext-message-scrollable::-webkit-scrollbar-thumb {
+    background-color: #f00; /* color del pulgar */
+    border-radius: 6px; /* bordes redondeados del pulgar */
+}
+
+.ext-message-scrollable::-moz-scrollbar {
+    width: 20px; /* ancho de la barra de desplazamiento */
+}
+
+.ext-message-scrollable::-moz-scrollbar-thumb {
+    background-color: #f00; /* color del pulgar */
+    border-radius: 6px; /* bordes redondeados del pulgar */
+}
