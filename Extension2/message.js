@@ -1,5 +1,5 @@
 
-function createMessage(messageType) {
+function createMessage(messageType,message=null) {
     var messageBox = document.createElement('div');
     var message= document.createElement('p');
     messageBox.appendChild(message);
@@ -9,8 +9,10 @@ function createMessage(messageType) {
         message.innerHTML = document.getElementById("chat_input").value;
         document.querySelector(".ext-message").appendChild(messageBox)
 
-    }else{
+    }else if (messageType=="other"){
         messageBox.className = "ext-other-message";
+        message.innerHTML =message;
+        document.querySelector(".ext-message").appendChild(messageBox)
     }
 
     

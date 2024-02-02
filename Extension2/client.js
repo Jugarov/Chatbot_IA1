@@ -1,3 +1,4 @@
+
 class Client {
     constructor(address, port) {
         this.address = address;
@@ -10,6 +11,7 @@ class Client {
 
         this.socket.addEventListener('message', (event) => {
             console.log(`Response received from server: ${event.data}`);
+            createMessage('other',event.data)
         });
 
         this.socket.addEventListener('close', () => {
@@ -42,7 +44,7 @@ class Client {
 let client;
 
 function startApp() {
-    client = new Client("25.69.81.47", 2620);
+    client = new Client("localhost", 5500);
 }
 
 function sendMessage() {
