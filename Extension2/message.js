@@ -17,6 +17,18 @@ function createMessage(messageType,message=null) {
         document.querySelector(".ext-message").appendChild(messageBox)
     }*/
   
-    
+    resetInput();
 
+}
+
+document.addEventListener('keydown', function (event) {
+    if (event.key === 'Enter') {
+        // Llama a las funciones que se ejecutan al hacer clic en el botón
+        sendMessage();
+        createMessage('self');
+    }
+});
+
+function resetInput() {
+    document.getElementById('chat_input').value = '';
 }
