@@ -1,81 +1,51 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    /* Estilo del contenedor padre con altura fija de 600px y display flex */
-    #contenedor-padre {
-      height: 600px;
-      display: flex;
-      flex-direction: column; /* Apila los elementos verticalmente */
-      border: 1px solid #ccc; /* Bordes opcionales para visualización */
-    }
-
-    /* Estilo del contenedor externo con altura máxima del 50% de su contenedor padre y overflow-y scroll */
-    #contenedor-externo {
-      flex: 1; /* Toma el espacio restante */
-      max-height: 50%;
-      overflow-y: scroll;
-      border: 1px solid #ccc; /* Bordes opcionales para visualización */
-      box-sizing: border-box; /* Incluye el borde en el cálculo del tamaño total */
-    }
-
-    /* Estilo de los contenedores internos con altura fija y flex: 0 para evitar que crezcan */
-    .contenedor-interno {
-      height: 100px;
-      border-bottom: 1px solid #eee; /* Bordes opcionales para visualización */
-      flex: 0; /* Evita que los contenedores internos crezcan */
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=300px, initial-scale=1.0">
+    <title>IA Chatbot</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Contenedor padre con altura fija de 600px y display flex -->
-  <div id="contenedor-padre">
 
-    <!-- Contenedor externo con altura máxima del 50% de su contenedor padre y scroll -->
-    <div id="contenedor-externo">
+    <div class="extGen-container">
+        <header class="ext-header">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDZL0Th3LPG2OpTPXSAekzBbA2GTobXO1BWrVZyr01_w&s" alt="IA1" class="ext-logo"> 
+            <h1 class="ext-header-title">Chatbot IA 1</h1>
 
-      <!-- Contenedor interno 1 -->
-      <div class="contenedor-interno">
-        <!-- Contenido del contenedor interno 1 -->
-        Contenedor Interno 1
-      </div>
+        </header>
+        <div class="ext-message">
+            <div class="ext-message-scrollable">
 
-      <!-- Contenedor interno 2 -->
-      <div class="contenedor-interno">
-        <!-- Contenido del contenedor interno 2 -->
-        Contenedor Interno 2
-      </div>
-
-      <!-- Contenedor interno 3 -->
-      <div class="contenedor-interno">
-        <!-- Contenido del contenedor interno 3 -->
-        Contenedor Interno 3
-      </div>
-
-      <!-- Contenedor interno 1 -->
-      <div class="contenedor-interno">
-        <!-- Contenido del contenedor interno 1 -->
-        Contenedor Interno 1
-      </div>
-
-      <!-- Contenedor interno 2 -->
-      <div class="contenedor-interno">
-        <!-- Contenido del contenedor interno 2 -->
-        Contenedor Interno 2
-      </div>
-
-      <!-- Contenedor interno 3 -->
-      <div class="contenedor-interno">
-        <!-- Contenido del contenedor interno 3 -->
-        Contenedor Interno 3
-      </div>
-
-      <!-- Puedes agregar más contenedores internos según sea necesario -->
-
+            </div>
+        </div>
+        <section class="ext-prompt">
+            <input type="text" id="chat_input" placeholder="Escribe aquí tu consulta...">
+            <div id="send-button">
+                <button type="button" id="send">
+                    <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                        <path fill="#006ae3" d="M2,21L23,12L2,3V10L17,12L2,14V21Z" />
+                    </svg>
+                </button>
+            </div>   
+        </section>
     </div>
 
-  </div>
+    <script src="client.js"></script>
+    <script src="message.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Obtiene el botón por su ID
+            var sendButton = document.getElementById('send');
+    
+            // Agrega eventos a los botones
+            sendButton.addEventListener('click', function () {
+                sendMessage();       // Llama a la función de client.js
+                createMessage('self'); // Llama a la función de message.js
+            });
+        });
+    </script>
 </body>
 </html>

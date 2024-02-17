@@ -48,7 +48,7 @@ class Client {
 let client;
 
 function startApp() {
-    client = new Client("25.72.36.120", 2620);
+    client = new Client("localhost", 8554);
 }
 
 function sendMessage() {
