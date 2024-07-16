@@ -4,7 +4,7 @@
     align-items: center;
     width: 300px;
     height: 500px;
-    background-color: #A1A1E4;
+    background-color: #F69C64;
     padding: 10px;
     margin: 10px;
     border: 10px solid #0000 ;
@@ -51,7 +51,7 @@
 }
 
 .ext-self-message{
-    background-color: #E4E4A1;
+    background-color: #F66375;
     width: fit-content;
     max-width: 75%;
     height: auto;
@@ -68,7 +68,7 @@
 }
 
 .ext-other-message{
-    background-color: #A1A1E4;
+    background-color: #F69C64;
     width: fit-content;
     max-width: 75%;
     height: auto;

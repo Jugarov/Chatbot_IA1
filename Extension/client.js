@@ -1,8 +1,7 @@
 class Client {
-    constructor(address, port) {
-        this.address = address;
-        this.port = port;
-        this.socket = new WebSocket(`ws://${address}:${port}`);
+    constructor(uri) {
+        this.uri = uri;
+        this.socket = new WebSocket(uri);
 
         this.socket.addEventListener('open', () => {
             console.log('Connection established.');
@@ -14,7 +13,7 @@ class Client {
             let message= document.createElement('p');
             messageBox.appendChild(message);
             messageBox.className = "ext-other-message";
-            message.innerHTML =event.data;
+            message.innerHTML = event.data;
             document.querySelector(".ext-message").appendChild(messageBox)
         });
 
@@ -48,7 +47,7 @@ class Client {
 let client;
 
 function startApp() {
-    client = new Client("localhost", 8554);
+    client = new Client("ws://chatbotia1.ingenieria.uncuyo.edu.ar");
 }
 
 function sendMessage() {
